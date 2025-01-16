@@ -1,0 +1,44 @@
+/* pages/create/yucun/add.wxss */
+
+@import './../index.wxss';
+
+page {
+  background: #fff !important;
+}
+
+.titleBox {
+  padding-bottom: 0;
+}
+
+.title {
+  padding-left: 50rpx;
+}
+
+.title .xian {
+  left: 30rpx;
+}
+
+.nameInput {
+  height: 90rpx;
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 10rpx;
+  margin: 30rpx 30rpx 0;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.textarea .van-field__body--textarea {
+  margin-top: 0;
+}
+
+.addBtn {
+  width: 575rpx;
+  height: 72rpx;
+  background: linear-gradient(-90deg, #1066fa 0%, #2a93ff 100%);
+  border-radius: 36rpx;
+  box-shadow: 12rpx 5rpx 20rpx 8rpx rgba(33, 131, 253, 0.28);
+  font-size: 30rpx;
+  letter-spacing: 3rpx;
+  margin: 0 auto;
+}

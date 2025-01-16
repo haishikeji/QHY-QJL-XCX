@@ -1,0 +1,27 @@
+<!--pages/create/yucun/add.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="content">{{id?'修改':'添加'}}预存名单</view>
+</cu-custom>
+
+<view class="page">
+  <view class="titleBox">
+    <view class="title">
+      <view class="xian"></view>
+      预存名单名称：
+    </view>
+  </view>
+  <input maxlength="20" class="nameInput" placeholder="请输入预存名单名称" type="text" model:value="{{name}}" />
+
+  <view class="titleBox flex-space">
+    <view class="title">
+      <view class="xian"></view>
+      预存名单信息：
+    </view>
+  </view>
+
+  <van-field class="textarea textarea2 huanhang" title-width="300rpx" border="{{false}}" placeholder-style="color:#999999; line-height: 1.8" adjust-position type="textarea" model:value="{{ text }}" placeholder="请输入姓名名单，一行一个名字,例如：\n张三\n李四\n王五\n赵六\n\n如需填写编号，按名单打卡选中编号选项，用逗号分离,例如：\n张三,1\n李四,2\n王五,3">
+
+  </van-field>
+</view>
+
+<view class="addBtn flex-c c-f" catchtap="addYucun">确认{{id?'修改':'添加'}}</view>

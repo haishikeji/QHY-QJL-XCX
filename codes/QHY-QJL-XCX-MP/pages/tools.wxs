@@ -1,0 +1,55 @@
+function strTojson(value) {
+  if (value) {
+    return JSON.parse(value);
+  }
+}
+
+function strToarr(value) {
+  if (value) {
+    return value.split(',');
+  }
+}
+
+function jsonTostr(value) {
+  if (value) {
+    return encodeURIComponent(JSON.stringify(value));
+  }
+}
+
+function hasItem(val, arr) {
+  var flag = arr.indexOf(val);
+  // console.log('------------', val, flag, arr)
+  if (flag >= 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function substr(value, s, e) {
+  if (value) {
+    return value.substring(s, e);
+  }
+}
+
+function miaoToTime(time) {
+  // var h = parseInt(time / 60 / 60 % 24)
+  // h = h < 10 ? '0' + h : h
+  var m = parseInt(time / 60)
+  m = m < 10 ? '0' + m : m
+  var s = parseInt(time % 60)
+  s = s < 10 ? '0' + s : s
+  // 作为返回值返回
+  // console.log(m + ':' + s)
+  return m + ':' + s
+}
+
+//暴露接口调用
+module.exports = {
+  strTojson: strTojson,
+  strToarr: strToarr,
+  hasItem: hasItem,
+  substr: substr,
+  jsonTostr: jsonTostr,
+  miaoToTime: miaoToTime
+}
